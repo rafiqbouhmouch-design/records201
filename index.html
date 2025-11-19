@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>records201 — Media · News · Football Live</title>
+  <meta name="description" content="records201 — Media, news, entertainment and football live streams." />
+
+  <!-- Poppins font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- main stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- APP WRAPPER -->
+  <div class="app">
+
+    <!-- NAVBAR -->
+    <header class="nav" role="banner">
+      <div class="nav-inner container">
+        <a href="#home" class="brand" aria-label="records201 home">
+          <!-- Logo file (place logo.png in project root) -->
+          <img src="logo.png" alt="records201 logo" class="logo-img" />
+          <div class="brand-text">
+            <span class="brand-name">records 201</span>
+            <span class="brand-tag">Media · News · Streams</span>
+          </div>
+        </a>
+
+        <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav id="navMenu" class="nav-menu" role="navigation" aria-label="Main navigation">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#news" class="nav-link">News</a>
+          <a href="#streams" class="nav-link">Live</a>
+          <a href="#media" class="nav-link">Media</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#contact" class="nav-cta">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+
+      <!-- HERO -->
+      <section id="home" class="hero">
+        <div class="container hero-inner">
+          <div class="hero-left">
+            <h1 class="hero-title">records 201</h1>
+            <p class="hero-sub">Media, news, entertainment — curated multimedia and live football streams.</p>
+
+            <div class="hero-actions">
+              <a href="#streams" class="btn btn-primary">Watch Live</a>
+              <a href="#news" class="btn btn-ghost">Latest News</a>
+            </div>
+
+            <div class="hero-stats">
+              <div class="stat">
+                <div class="stat-value" id="liveCount">12,482</div>
+                <div class="stat-label">live viewers</div>
+              </div>
+              <div class="stat">
+                <div class="stat-value">+3.2k</div>
+                <div class="stat-label">weekly visits</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-right">
+            <div class="logo-spot glass-card">
+              
+              <!-- big logo in hero -->
+              <img src="logo.png" alt="records201 gold logo" class="logo-hero" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEWS -->
+      <section id="news" class="section">
+        <div class="container section-head">
+          <h2 class="section-title">Latest News</h2>
+          <div class="controls">
+            <select id="newsFilter" aria-label="Filter news">
+              <option value="all">All</option>
+              <option value="football">Football</option>
+              <option value="media">Media</option>
+              <option value="entertainment">Entertainment</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="container grid news-grid" id="newsGrid">
+          <!-- placeholder cards -->
+          <article class="card news-card" data-category="football">
+            <div class="card-thumb" style="background-image:url('https://images.unsplash.com/photo-1521412644187-c49fa049e84d?q=80&w=1200&auto=format&fit=crop')"></div>
+            <div class="card-body">
+              <h3 class="card-title">Big Match Tonight: Team A vs Team B</h3>
+              <p class="card-excerpt">Stadium packed, fans ready — full coverage at 8 PM.</p>
+              <div class="card-meta"><time datetime="2025-11-15">Nov 15, 2025</time><a href="#" class="read-more">Read</a></div>
+            </div>
+          </article>
+
+          <article class="card news-card" data-category="media">
+            <div class="card-thumb" style="background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1200&auto=format&fit=crop')"></div>
+            <div class="card-body">
+              <h3 class="card-title">records201 launches new podcast</h3>
+              <p class="card-excerpt">Interviews with rising creators in Morocco.</p>
+              <div class="card-meta"><time datetime="2025-10-10">Oct 10, 2025</time><a href="#" class="read-more">Read</a></div>
+            </div>
+          </article>
+
+          <article class="card news-card" data-category="entertainment">
+            <div class="card-thumb" style="background-image:url('https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?q=80&w=1200&auto=format&fit=crop')"></div>
+            <div class="card-body">
+              <h3 class="card-title">Top 10 highlights this week</h3>
+              <p class="card-excerpt">A curated list of viral moments and entertainment news.</p>
+              <div class="card-meta"><time datetime="2025-11-12">Nov 12, 2025</time><a href="#" class="read-more">Read</a></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- LIVE STREAMS -->
+       
+      <section id="streams" class="section">
+        <div class="container section-head">
+          <h2 class="section-title">Football Live Streams</h2>
+          <p class="muted">Click Play to open demo stream modal (placeholders)</p>
+        </div>
+
+        <div class="container grid streams-grid">
+          <article class="card stream-card" data-match="live">
+            <div class="stream-thumb" style="background-image:url('https://images.unsplash.com/photo-1517927033932-b3d18e77a7c9?q=80&w=1200&auto=format&fit=crop')">
+              <div class="stream-overlay">
+                <span class="match">Team A <strong>2</strong> - <strong>1</strong> Team B</span>
+                <button class="btn btn-play" data-stream-title="Team A vs Team B">Play</button>
+              </div>
+            </div>
+            <div class="card-body"><h3 class="card-title">Team A vs Team B</h3><p class="card-excerpt">League — Live now</p></div>
+            
+          </article>
+
+          <article class="card stream-card">
+            <div class="stream-thumb" style="background-image:url('https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf?q=80&w=1200&auto=format&fit=crop')">
+              <div class="stream-overlay">
+                <span class="match">Upcoming: Team C vs Team D</span>
+                <button class="btn btn-play" data-stream-title="Team C vs Team D">Play</button>
+              </div>
+            </div>
+            <div class="card-body"><h3 class="card-title">Team C vs Team D</h3><p class="card-excerpt">Starts 20:00</p></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- MEDIA LIBRARY -->
+      <section id="media" class="section">
+        <div class="container section-head">
+          <h2 class="section-title">Media Library</h2>
+          <div class="controls">
+            <button class="chip active" data-filter="all">All</button>
+            <button class="chip" data-filter="photos">Photos</button>
+            <button class="chip" data-filter="videos">Videos</button>
+          </div>
+        </div>
+
+        <div class="container grid media-grid" id="mediaGrid">
+          <figure class="media-item" data-type="photos">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1500708621507-2c0b1a4b1e35?q=80&w=1200&auto=format&fit=crop" alt="Stadium crowd">
+            <figcaption>Stadium crowd</figcaption>
+          </figure>
+
+          <figure class="media-item" data-type="videos">
+            <div class="video-thumb" style="background-image:url('https://images.unsplash.com/photo-1495567720989-cebdbdd97913?q=80&w=1200&auto=format&fit=crop')">
+              <button class="btn btn-play small" data-video="sample">Play</button>
+            </div>
+            <figcaption>Match highlights</figcaption>
+          </figure>
+
+          <figure class="media-item" data-type="photos">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=1200&auto=format&fit=crop" alt="Fan cheering">
+            <figcaption>Fan cheering</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section about-section">
+        <div class="container">
+          <div class="glass-card about-card">
+            <h2>About records201</h2>
+            <p>records201 is a media brand focused on delivering timely news, entertainment, curated multimedia, and live football streaming. Built by creators for fans — local coverage, international perspective.</p>
+            <ul class="about-list"><li>Media & News</li><li>Live Football Streams</li><li>Original Productions</li><li>Curated Galleries</li></ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section contact-section">
+        <div class="container">
+          <div class="glass-card contact-card">
+            <h2>Contact Us</h2>
+            <form id="contactForm" class="contact-form" novalidate>
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" required>
+
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Send Message</button>
+                <div id="formStatus" class="muted small" aria-live="polite"></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <img src="logo.png" alt="records201 logo" class="footer-logo" />
+          <p class="muted">© <span id="year"></span> records201 — All rights reserved.</p>
+        </div>
+
+        <div class="footer-right">
+          <div class="social">
+            <a href="#" aria-label="Twitter" class="icon">T</a>
+            <a href="#" aria-label="YouTube" class="icon">Y</a>
+            <a href="#" aria-label="Instagram" class="icon">I</a>
+            <a href="#" aria-label="Facebook" class="icon">F</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- STREAM / VIDEO MODAL -->
+    <div id="mediaModal" class="modal" aria-hidden="true">
+      <div class="modal-shell" role="dialog" aria-modal="true" aria-label="Media player">
+        <button id="modalClose" class="modal-close" aria-label="Close">✕</button>
+        <div class="modal-content">
+          <h3 id="modalTitle">Demo Stream</h3>
+          <div class="video-embed">
+            <div class="video-placeholder">Stream player (demo)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- main script -->
+  <script src="script.js"></script>
+</body>
+</html>
